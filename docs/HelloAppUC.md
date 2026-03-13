@@ -1,41 +1,26 @@
 # HelloApp Use Case Documentation
-
-## UC1 – Display "Hello World"
-
-### Description
-The application displays "Hello World" in the console when the program is executed. This demonstrates a basic Java application that prints text to the console.
-
-### Preconditions
-- The application is launched.
-
-### Main Flow
-1. User runs the application.
-2. The application executes the `main()` method.
-3. The program prints **"Hello World"** to the console.
-4. The application terminates.
-
-### Postconditions
-- The message **"Hello World"** is displayed to the user.
-
-### Example Output
-
-
-## UC2 – Display Hello with Command-Line Argument
+## UC3 – Display "Hello" with Command-Line Argument or Default Message
 
 ### Description
-The application accepts a user's name as a command-line argument and displays a personalized greeting.
+The application accepts a user's name as a command-line argument and displays a personalized greeting. If no name is provided, the program uses the default value "World".
 
 ### Preconditions
-Application is launched with a name argument.
+The application is launched with or without a command-line argument.
 
 ### Main Flow
-1. User runs the application with a command-line argument.
-2. The program reads the name from `args[0]`.
-3. The program prints "Hello, <name>!".
+1. User runs the application with or without a name argument.
+2. The program checks if a command-line argument exists.
+3. If an argument exists, the program reads the name from `args[0]`.
+4. If no argument exists, the program assigns the default value **"World"**.
+5. The program prints the greeting message.
 
 ### Postconditions
-A personalized greeting message is displayed.
+A greeting message is displayed using either the provided name or the default value.
 
-### Example Output
-Input: java HelloApp Alice  
-Output: Hello, Alice!
+
+### Concepts Learned
+- Command-line arguments using `String[] args`
+- Checking array length using `args.length`
+- Conditional logic
+- Default values
+- Ternary operator
